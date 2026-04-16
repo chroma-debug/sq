@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_dark">#111111</color>
+    <color name="gray_mid">#333333</color>
+    <color name="gray_light">#888888</color>
+    <color name="accent_red">#FF0000</color>
+    <color name="accent_green">#00FF00</color>
+    <color name="warden_primary">#000000</color>
+    <color name="warden_on_primary">#FFFFFF</color>
+    <color name="warden_surface">#111111</color>
+    <color name="warden_on_surface">#FFFFFF</color>
+    <color name="warden_border">#FFFFFF</color>
+</resources>

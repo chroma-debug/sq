@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">THE WARDEN</string>
+    <string name="accessibility_service_label">Warden Focus Monitor</string>
+    <string name="accessibility_service_description">The Warden monitors foreground apps and URLs to enforce your focus sessions. This service is required for app and website blocking to function.</string>
+
+    <!-- Main Screen -->
+    <string name="session_active">SESSION ACTIVE</string>
+    <string name="session_inactive">SESSION INACTIVE</string>
+    <string name="start_session">START SESSION</string>
+    <string name="stop_session">STOP SESSION</string>
+    <string name="app_blacklist">APP BLACKLIST</string>
+    <string name="url_blacklist">URL BLACKLIST</string>
+    <string name="schedule">SCHEDULE</string>
+    <string name="settings">SETTINGS</string>
+
+    <!-- App Blacklist -->
+    <string name="app_blacklist_title">APP BLACKLIST</string>
+    <string name="app_blacklist_subtitle">TOGGLE APPS TO BLOCK DURING SESSIONS</string>
+    <string name="search_apps">SEARCH APPS...</string>
+
+    <!-- URL Blacklist -->
+    <string name="url_blacklist_title">URL BLACKLIST</string>
+    <string name="url_blacklist_subtitle">ADD DOMAINS TO BLOCK IN CHROME</string>
+    <string name="add_url_hint">ENTER DOMAIN (e.g. reddit.com)</string>
+    <string name="add">ADD</string>
+    <string name="remove">REMOVE</string>
+    <string name="url_empty_error">DOMAIN CANNOT BE EMPTY</string>
+
+    <!-- Schedule -->
+    <string name="schedule_title">SCHEDULE</string>
+    <string name="schedule_subtitle">SET ACTIVE HOURS FOR EACH DAY</string>
+    <string name="break_duration">BREAK DURATION (MINUTES)</string>
+    <string name="break_interval">BREAK EVERY (MINUTES)</string>
+    <string name="save_schedule">SAVE SCHEDULE</string>
+
+    <!-- Settings -->
+    <string name="settings_title">SETTINGS</string>
+    <string name="api_key_label">AI API KEY (OPENAI COMPATIBLE)</string>
+    <string name="api_key_hint">sk-...</string>
+    <string name="api_base_url_label">API BASE URL</string>
+    <string name="api_base_url_hint">https://api.openai.com/v1</string>
+    <string name="save_keys">SAVE KEYS</string>
+    <string name="keys_saved">KEYS SAVED SECURELY</string>
+    <string name="grant_overlay">GRANT OVERLAY PERMISSION</string>
+    <string name="grant_accessibility">GRANT ACCESSIBILITY PERMISSION</string>
+    <string name="grant_usage_stats">GRANT USAGE STATS PERMISSION</string>
+
+    <!-- Overlay -->
+    <string name="get_back_to_work">GET BACK TO WORK.</string>
+    <string name="blocked_app_message">THIS APP IS BLOCKED DURING YOUR SESSION.</string>
+    <string name="unlock_with_proof">UNLOCK WITH PROOF OF WORK</string>
+    <string name="go_back">GO BACK</string>
+
+    <!-- Camera Unlock -->
+    <string name="camera_unlock_title">PROOF OF WORK</string>
+    <string name="camera_unlock_subtitle">PHOTOGRAPH YOUR HANDWRITTEN NOTES TO UNLOCK</string>
+    <string name="capture">CAPTURE</string>
+    <string name="analyzing">ANALYZING...</string>
+    <string name="unlock_granted">PROOF ACCEPTED. 5-MINUTE BREAK GRANTED.</string>
+    <string name="unlock_denied">INSUFFICIENT PROOF. KEEP WORKING.</string>
+    <string name="no_api_key">NO API KEY CONFIGURED. SET ONE IN SETTINGS.</string>
+
+    <!-- Days -->
+    <string name="monday">MON</string>
+    <string name="tuesday">TUE</string>
+    <string name="wednesday">WED</string>
+    <string name="thursday">THU</string>
+    <string name="friday">FRI</string>
+    <string name="saturday">SAT</string>
+    <string name="sunday">SUN</string>
+</resources>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <!-- Top border -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/white" />
+
+    <!-- Title section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:gravity="center_vertical">
+
+        <!-- Status indicator dot -->
+        <View
+            android:id="@+id/viewStatusIndicator"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@color/gray_mid"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THE WARDEN"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:id="@+id/tvSessionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SESSION INACTIVE"
+                android:textSize="11sp"
+                android:textColor="@color/gray_light"
+                android:textAllCaps="true"
+                android:letterSpacing="0.2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- White divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white" />
+
+    <!-- Permission warning -->
+    <TextView
+        android:id="@+id/tvPermissionWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/accent_red"
+        android:textAllCaps="true"
+        android:letterSpacing="0.1"
+        android:padding="12dp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <!-- Stats row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/tvAppCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 APPS BLOCKED"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/border_white"
+            android:padding="12dp"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/tvUrlCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 URLS BLOCKED"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Main toggle button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnToggleSession"
+        style="@style/Widget.Warden.Button"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/start_session"
+        android:textSize="18sp" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- White divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_mid"
+        android:layout_marginHorizontal="24dp" />
+
+    <!-- Navigation buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAppBlacklist"
+            style="@style/Widget.Warden.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/app_blacklist"
+            android:gravity="start|center_vertical"
+            android:paddingStart="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUrlBlacklist"
+            style="@style/Widget.Warden.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/url_blacklist"
+            android:gravity="start|center_vertical"
+            android:paddingStart="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSchedule"
+            style="@style/Widget.Warden.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/schedule"
+            android:gravity="start|center_vertical"
+            android:paddingStart="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSettings"
+            style="@style/Widget.Warden.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/settings"
+            android:gravity="start|center_vertical"
+            android:paddingStart="16dp" />
+    </LinearLayout>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom border -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/white" />
+
+</LinearLayout>

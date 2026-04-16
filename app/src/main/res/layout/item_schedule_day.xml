@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="16dp">
+
+    <!-- Day header row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvDayName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.15" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchDayEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/white"
+            android:trackTint="@color/gray_mid" />
+    </LinearLayout>
+
+    <!-- Current schedule summary -->
+    <TextView
+        android:id="@+id/tvCurrentSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/accent_green"
+        android:textAllCaps="true"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="4dp"
+        android:visibility="gone" />
+
+    <!-- Time configuration (shown when enabled) -->
+    <LinearLayout
+        android:id="@+id/layoutTimeConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:visibility="gone">
+
+        <!-- Start time row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="START"
+                android:textSize="11sp"
+                android:textColor="@color/gray_light"
+                android:textAllCaps="true" />
+
+            <NumberPicker
+                android:id="@+id/npStartHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:paddingHorizontal="4dp" />
+
+            <NumberPicker
+                android:id="@+id/npStartMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- End time row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="END"
+                android:textSize="11sp"
+                android:textColor="@color/gray_light"
+                android:textAllCaps="true" />
+
+            <NumberPicker
+                android:id="@+id/npEndHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:paddingHorizontal="4dp" />
+
+            <NumberPicker
+                android:id="@+id/npEndMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Break config row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="BREAK"
+                android:textSize="11sp"
+                android:textColor="@color/gray_light"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EVERY"
+                android:textSize="10sp"
+                android:textColor="@color/gray_light"
+                android:paddingEnd="4dp" />
+
+            <NumberPicker
+                android:id="@+id/npBreakInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MIN FOR"
+                android:textSize="10sp"
+                android:textColor="@color/gray_light"
+                android:paddingHorizontal="4dp" />
+
+            <NumberPicker
+                android:id="@+id/npBreakDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MIN"
+                android:textSize="10sp"
+                android:textColor="@color/gray_light"
+                android:paddingStart="4dp" />
+        </LinearLayout>
+
+        <!-- Error text -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="@color/accent_red"
+            android:textAllCaps="true"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+
+        <!-- Save button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveDay"
+            style="@style/Widget.Warden.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_mid"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
